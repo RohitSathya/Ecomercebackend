@@ -12,15 +12,15 @@ app.use(cors(
     }
 ))
 
-app.use('/product',router)
-app.get('/',async(req,res)=>{
-    res.end('hi')
+app.use("/product",router)
+app.get("/",async(req,res)=>{
+    res.json("hi")
 })
 
                            
-mongoose.connect('mongodb+srv://admin:12345@royoapi.3qmdrjq.mongodb.net/ecomeerce?retryWrites=true&w=majority').then(()=>{
+mongoose.connect("mongodb+srv://admin:12345@royoapi.3qmdrjq.mongodb.net/ecomeerce?retryWrites=true&w=majority").then(()=>{
     console.log('database connected')
-  app.listen(3000,()=>console.log('running'))
+  app.listen(3001,()=>console.log('running'))
  
 })
 

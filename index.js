@@ -6,7 +6,8 @@ const router=require('./Routes/Routes')
 app.use(express.json())
 app.use(cors(
     {
-        origin:["https://ecomerce-foront.vercel.app/"]
+        origin:["https://ecomerce-foront.vercel.app"],
+        methods:["POST","GET","PUT","DELETE"]
     }
 ))
 

@@ -8,7 +8,7 @@ app.use(cors())
 
 app.use('/product',router)
 
-app.get('/hi',async(req,res)=>{
+app.get('/',async(req,res)=>{
     res.end('hi')
 })
 

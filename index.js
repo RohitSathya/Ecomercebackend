@@ -5,12 +5,7 @@ const mongoose=require('mongoose')
 const router=require('./Routes/Routes')
 
 app.use(express.json())
-app.use(cors(
-    {
-        origin:["https://ecomerce-foront.vercel.app"],
-        methods:["POST","GET","PUT","DELETE"]
-    }
-))
+app.use(cors())
 
 app.use("/product",router)
 app.get("/",async(req,res)=>{

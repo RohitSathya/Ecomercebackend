@@ -8,6 +8,10 @@ app.use(cors())
 
 app.use('/product',router)
 
+app.get('/hi',async(req,res)=>{
+    res.end('hi')
+})
+
 mongoose.set("strictQuery",false)
                            
 mongoose.connect('mongodb+srv://admin:12345@royoapi.3qmdrjq.mongodb.net/ecomeerce?retryWrites=true&w=majority').then(()=>{

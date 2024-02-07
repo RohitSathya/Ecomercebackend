@@ -4,7 +4,11 @@ const app=express()
 const mongoose=require('mongoose')
 const router=require('./Routes/Routes')
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    {
+        origin:["https://ecomerce-foront.vercel.app/"]
+    }
+))
 
 app.use('/product',router)
 
